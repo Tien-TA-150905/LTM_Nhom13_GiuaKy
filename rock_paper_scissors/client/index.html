@@ -10,5 +10,31 @@
 </head>
 <body>
     <h1> Welcome to Rock, Paper and Scissors Game </h1>
+    <div id ="initial">
+        <button onclick="createGame()">Create Game</button>
+    <div>or</div>
+    <input type="text" name="" id="roomUniqueId" />
+    <button onclick="joinGame()">Join Game</button>
+    </div>
+    <div id = "gamePlay">
+        <div id="waitingArea">
+            
+        </div>
+        <div id="gameArea" style="display: none;"> 
+            You:
+            <div id="player1Choice">
+                <button class="rock" onclick="sendChoice('Rock')">Rock</button>
+                <button class="paper" onclick="sendChoice('Paper')">Paper</button>
+                <button class="scissor" onclick="sendChoice('Scissor')">Scissors</button>
+            </div>
+            Opponent:
+            <div id="player2Choice">
+                
+            </div>
+        </div>
+        <div id="winnerArea">
+
+        </div>
+    </div>
 </body>
 </html>
