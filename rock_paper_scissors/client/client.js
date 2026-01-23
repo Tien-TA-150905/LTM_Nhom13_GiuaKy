@@ -49,6 +49,7 @@ socket.on("p2Choice", (data) => {
     }
 });
 
+<<<<<<< HEAD
 socket.on("result", (data) => {
     let winnerText = '';
     if (data.winner != 'd'){
@@ -76,10 +77,15 @@ socket.on("result", (data) => {
 function sendChoice(rpsValue) {
     const choiceEvent = player1 ? "p1Choice" : "p2Choice";
 
+=======
+function sendChoice(rpsValue) {
+    const choiceEvent = player1 ? "p1Choice" : "p2Choice";
+>>>>>>> 73496b87bc711bd159ea981d4bb3c6055ac72b39
     socket.emit(choiceEvent, {
         rpsValue: rpsValue,
         roomUniqueId: roomUniqueId
     });
+<<<<<<< HEAD
 
     let playerChoiceButton = document.createElement('button');
     playerChoiceButton.className = rpsValue.toLowerCase();
@@ -87,10 +93,19 @@ function sendChoice(rpsValue) {
 
     document.getElementById('player1Choice').innerHTML = "";
     document.getElementById('player1Choice').appendChild(playerChoiceButton);
+=======
+    let playerChoiceButton = document.createElement('button');
+    playerChoiceButton.style.display = 'block';
+    playerChoiceButton.innerText = rpsValue;
+    document.getElementById('player1Choice').innerHTML = "";
+    document.getElementById('player1Choice').appendChild(playerChoiceButton);
+
+>>>>>>> 73496b87bc711bd159ea981d4bb3c6055ac72b39
 }
 
 function createOpponentChoiceButton(data) {
     document.getElementById('opponentState').innerHTML = "Opponent made a choice";
+<<<<<<< HEAD
 
     let opponentButton = document.getElementById('opponentButton');
     if (!opponentButton) {
@@ -103,3 +118,6 @@ function createOpponentChoiceButton(data) {
     opponentButton.className = data.rpsValue.toLowerCase(); 
     opponentButton.style.display = 'none'; 
 }
+=======
+}
+>>>>>>> 73496b87bc711bd159ea981d4bb3c6055ac72b39

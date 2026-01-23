@@ -60,6 +60,7 @@ io.on('connection', (socket) => {
 });
 
 function declareWinner (roomUniqueId){
+<<<<<<< HEAD
     let p1Choice = rooms[roomUniqueId].p1Choice;
     let p2Choice = rooms[roomUniqueId].p2Choice;
     let winner = null;
@@ -95,6 +96,9 @@ function declareWinner (roomUniqueId){
     });
     rooms[roomUniqueId].p1Choice = null;
     rooms[roomUniqueId].p2Choice = null;
+=======
+    
+>>>>>>> 73496b87bc711bd159ea981d4bb3c6055ac72b39
 }
 
 server.listen(3000, () => {
